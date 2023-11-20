@@ -7,3 +7,6 @@ php artisan make:model Post -cmf
 c : controller
 m : model
 f : factory
+
+
+php artisan migrate --seed
