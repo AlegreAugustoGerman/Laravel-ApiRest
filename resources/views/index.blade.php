@@ -9,13 +9,21 @@
         <body class="bg-gray-100 text-grey-700">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-3 my-10">
-
-
-
-
-
-                    {{dd($user);}}
-
+                    {{dd($post);
+                        dd($user);}}
+                    @foreach ($post as $posts)
+                        @foreach ($user as $users)
+                        <div class="bg-white hover:bg-blue-100 border border-gray-200 p-5">
+                            <h2 class="font-bold text-lg mb-4">{{$posts->title}} <h3>{{$users->email}}</h3> </h2>
+                            <p class="text-xs">{{$posts->excerpt}}</p>
+                            <p class="text-xs text-right">{{$posts->published_at}}</p>
+                        </div>
+                        @endforeach
+                    @endforeach
+                </div>
+                <div class="mb-10">
+                    {{$post->links()}}
+                </div>
             </div>
         </body>
 </html>

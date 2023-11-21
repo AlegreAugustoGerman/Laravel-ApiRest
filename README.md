@@ -11,3 +11,12 @@ f : factory
 php artisan migrate --seed
 
 php artisan make:controller Api/V1/PostController --api --model=Post
+
+php artisan route:list
+
+--------------------------------------------------------------------
+proyectos de equipos siempre trabajar por versiones,
+porque aunque no esté planificado ahora otra versión si lo estará en un futuro
+--------------------------------------------------------------------
+
+php artisan make:resource V1/PostResource  
