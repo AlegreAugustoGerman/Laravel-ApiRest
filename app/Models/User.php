@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
     ];
 
+
+    public function getEmailAttribute(){
+        return substr($this->email, 0, 40);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

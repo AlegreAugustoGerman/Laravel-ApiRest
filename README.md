@@ -8,5 +8,6 @@ c : controller
 m : model
 f : factory
 
-
 php artisan migrate --seed
+
+php artisan make:controller Api/V1/PostController --api --model=Post

@@ -12,7 +12,7 @@ class PostController extends Controller
     }*/
 
     public function index(){
-        $post =Post::latest()->paginate();
+        $post =Post::all();
         return view('index', compact('post'));
     }
 

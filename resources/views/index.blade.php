@@ -3,17 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         <title>Laravel</title>
+    </head>
+        <body class="bg-gray-100 text-grey-700">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-3 my-10">
 
-        <body>
-            @foreach ($posts as $post)
-              <div>
-                <h3>{{ $post->title }}</h3>
-              </div>
-            @endforeach
 
-            {{ $posts->links() }}
 
-    </body>
+
+
+                    {{dd($user);}}
+
+            </div>
+        </body>
 </html>
