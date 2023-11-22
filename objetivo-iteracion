@@ -1,0 +1,12 @@
+puedo crear un template y mostrar solo lo que necesito en index
+y en el controlador de post traer el model user por la relación que existe
+
+recrear la v1 para user para consumir datos especificos de por ejemplo cantidad de posts de un usuario
+con el formato de resourse llamado al controller de user de v1  si no funciona probar en controller de post
+por la relacion para comprobar si funciona realmente parecido o puede ir separado.
+
+ir probando limitando accesos  a consumir en la api desde route con postman
+
+ahora que visualizo en el index los datos de la publicaciónes en la vista web
+
+pasar a la versión 2 de la api para que resiva o retorno algo mas

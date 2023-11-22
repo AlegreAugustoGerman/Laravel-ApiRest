@@ -8,7 +8,7 @@
     </head>
         <body class="bg-gray-100 text-grey-700">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-3 my-10">
+{{--                 <div class="grid grid-cols-3 my-10">
                     {{dd($post);
                         dd($user);}}
                     @foreach ($post as $posts)
@@ -20,6 +20,20 @@
                         </div>
                         @endforeach
                     @endforeach
+                </div>
+                <div class="mb-10">
+                    {{$post->links()}}
+                </div> --}}
+                 <div class="grid grid-cols-3 my-10">
+                    @foreach ($post as $posts)
+
+                        <div class="bg-white hover:bg-blue-100 border border-gray-200 p-5">
+
+                            <p class="text-xs">{{$posts->excerpt}}</p>
+                            <p class="text-xs text-right">{{$posts->published_at}}</p>
+                        </div>
+                        @endforeach
+
                 </div>
                 <div class="mb-10">
                     {{$post->links()}}
