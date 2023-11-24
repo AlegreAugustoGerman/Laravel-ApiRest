@@ -18,4 +18,9 @@ no puedo ponerle cualquier nombre*/
     public function getPublishedAtAttribute(){
         return $this->created_at->format('d/m/y');
     }
+
+    //relación el porst pertenece a un usuario
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

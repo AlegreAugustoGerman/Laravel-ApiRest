@@ -27,6 +27,10 @@ class User extends Authenticatable
     public function getEmailAttribute(){
         return substr($this->email, 0, 40);
     }
+
+    public function getNameAttribute(){
+        return substr($this->name, 0, 40);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
