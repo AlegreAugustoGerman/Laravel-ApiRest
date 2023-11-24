@@ -28,8 +28,9 @@
                     @foreach ($post as $posts)
 
                         <div class="bg-white hover:bg-blue-100 border border-gray-200 p-5">
-
-                            <p class="text-xs">{{$posts->excerpt}}</p>
+                            <h2 class="text-lg">{{$posts->title}}</h2>
+                            <h3 class="text-sm">{{$posts->slug}}</h3>
+                            <h4 class="text-xs">{{$posts->excerpt}}</h4>
                             <p class="text-xs text-right">{{$posts->published_at}}</p>
                         </div>
                         @endforeach
