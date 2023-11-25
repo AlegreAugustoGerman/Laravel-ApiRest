@@ -10,9 +10,9 @@ use App\Http\Resources\V2\PostResource;
 use App\Http\Resources\V2\PostCollection;
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    /*es la misma función que la de PostController base
+    porque entonces cree otro archivo? y es para poder personalizar
+    los resultados*/
     public function index()
     {
         return new PostCollection(Post::latest()->paginate());

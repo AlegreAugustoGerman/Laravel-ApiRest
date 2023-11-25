@@ -22,3 +22,9 @@ unicos 2 archivos posible para resource
 
 php artisan make:resource V1/PostResource  
 php artisan make:resource V2/PostCollection
+
+composer require laravel/sanctum
+
+Laravel Sanctum proporciona un sistema de autenticación para SPA (aplicaciones de una sola página), aplicaciones móviles y API simples basadas en tokens. Sanctum permite que cada usuario de su aplicación genere múltiples tokens API para su cuenta. A estos tokens se les pueden otorgar habilidades / alcances que especifican qué acciones pueden realizar los tokens. Fuente: https://laravel.com/docs/8.x/sanctum#introduction
+---------------------------------------
+
