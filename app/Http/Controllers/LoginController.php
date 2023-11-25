@@ -1,21 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    // Metodo que recibe el formulario
-    public function login(Request $request)
-    {
-      $this->validateLogin($request);
+        // Metodo que recibe el formulario
+        public function login(Request $request)
+        {
+          $this->validateLogin($request);
 
-      // Login true
+          if (Auth::attempt($request->only('email', 'password'))) {
+            return response()->json([
+              'token' => $request->user()->createToken($request->name)->plainTextToken,
+              'message' => 'Success'
+            ]);
+          }
 
-      // Login false
-
-    }
+          return response()->json([
+            'message' => 'Unauthorized'
+          ], 401);
+        }
 
     // Metodo que verifica que llegue la informacion correctamente
     public function validateLogin(Request $request)

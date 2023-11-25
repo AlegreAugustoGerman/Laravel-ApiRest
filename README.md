@@ -28,3 +28,9 @@ composer require laravel/sanctum
 Laravel Sanctum proporciona un sistema de autenticación para SPA (aplicaciones de una sola página), aplicaciones móviles y API simples basadas en tokens. Sanctum permite que cada usuario de su aplicación genere múltiples tokens API para su cuenta. A estos tokens se les pueden otorgar habilidades / alcances que especifican qué acciones pueden realizar los tokens. Fuente: https://laravel.com/docs/8.x/sanctum#introduction
 ---------------------------------------
 
+solo tenemos que implementarlo :D La autenticación basada en tokens básicamente es mandarle ese token al servidor, el servidor lo valida y te regresa una respuesta, y así en cada solicitud, aquí ya no hay sesiones tal cual, por eso el token tiene una duración (o al menos es recomendable que tenga una duración) :D
+
+Aun así, me pregunto cómo se haría esta validación con un sistema distribuido 🤔.
+-----------------------------------------
+
+Siguiente curso de postman y livewire
